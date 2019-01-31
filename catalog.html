@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title>HTML Academy: Седона</title>   <!-- Сразу вопрос к заголовку страницы -->
+      <title>HTML Academy: Седона</title>   <!-- Заголовок. Тк это внутренняя страница, как главная она называться не должна,
+                                                  а именно, заголовок должен характиризовать доп вкладку? У каждой
+                                                          внутренней страницы должен быть свой title? Всё верно?  -->
   </head>
   <body>
     <header class="main-header">
@@ -11,52 +13,52 @@
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="photo_video.html">Фото и видео</a></li>
+          <li><a class="main-header-logo">
+            <img src="#" width="#" height="#" alt="Логотип сервиса по поиску отелей в Седоне">
+          </a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li class="site-navigation-current"><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
-    <main class="container">  <!-- Далее предполагаю, что этот блок делится на отдельные секции с формой -->
+    <main class="container">  <!-- Внесла корректировку в форму, добавила <fieldset> -->
       <section class="extra">
+
         <form action="#" method="get">
-          <label>Инфраструктура:</label>
-          <br>
-          <input type="checkbox" name="option1" id="pool" checked>
-          <label for="pool">Бассейн</label>
-          <br>
-          <input type="checkbox" name="option2" id="parking">
-          <label for="parking">Парковка</label>
-          <br>
-          <input type="checkbox" name="option3" id="wi-fi">
-          <label for="wi-fi">Wi-Fi</label>
 
-        </form>
-      </section>
+          <fieldset>
+            <legend>Инфраструктура:</legend>
 
-      <section class="extra">
-        <form action="#" method="get">
-          <label>Тип жилья:</label>
-          <br>
-          <input type="checkbox" name="option4" id="hotel" checked>
-          <label for="hotel">Гостиница</label>
-          <br>
-          <input type="checkbox" name="option5" id="motel" checked>
-          <label for="motel">Мотель</label>
-          <br>
-          <input type="checkbox" name="option6" id="apartments" checked>
-          <label for="apartments">Апартаменты</label>
+            <input type="checkbox" name="option1" id="pool" checked>
+            <label for="pool">Бассейн</label>
+            <br>
+            <input type="checkbox" name="option1" id="parking">
+            <label for="parking">Парковка</label>
+            <br>
+            <input type="checkbox" name="option1" id="wi-fi">
+            <label for="wi-fi">Wi-Fi</label>
+          </fieldset>
 
-        </form>
-      </section>
+          <fieldset>
+            <legend>Тип жилья:</legend>
 
-      <section class="extra">
-        <form action="#" method="get">
-          <label>Стоимость в сутки (Р):</label>
-          <br>
-          <input type="range" min="0" max="3000">   <!-- Вопрос в оформлении доп рамки над бегунком -->
-          <br>
-          <input type="submit" value="Показать">
+            <input type="checkbox" name="option2" id="hotel" checked>
+            <label for="hotel">Гостиница</label>
+            <br>
+            <input type="checkbox" name="option2" id="motel" checked>
+            <label for="motel">Мотель</label>
+            <br>
+            <input type="checkbox" name="option2" id="apartments" checked>
+            <label for="apartments">Апартаменты</label>
+          </fieldset>
 
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+
+            <input type="range" min="0" max="3000">   <!-- Вопрос на будущее и "наподумать" - доп рамка сверху бегунка -->
+            <br>
+            <input type="submit" value="Показать">
+          </fieldset>
         </form>
       </section>
 
@@ -65,32 +67,78 @@
 
       </section>
 
-      <section class="hotels">
+      <section class="hotels-cite">                                   <!-- Сделала работу над ошибками в этом блоке -->
         <div class="hotels-item">
-          <img src="#" width="#" height="#" alt="Фото гостиницы">
-          <a class="button" href="#">Подробнее</a>
-          <a class="button" href="#">Забронировать</a>
-
-          <!-- Не знаю, куда оформляется тип жилья и стоимость (в какой блок) Аналогично с др дивами-->
+          <div class="item-left">
+            <div class="hotel-photo">
+              <img src="#" width="#" height="#" alt="Фото гостиницы">
+            </div>
+            <div class="description">
+              <h3>Amara Resort & Spa</h3>
+              <span>Гостиница</span>
+              <span>от 4000 Р.</span>
+              <a class="button" href="#">Подробнее</a>
+              <a class="button" href="#">Забронировать</a>
+            </div>
+          </div>
+          <div class="item-right">
+            <ul class="stars">
+              <li></li>
+              <li></li>                 <!-- Лишки ведь должны быть пустыми? Верно? -->
+              <li></li>
+              <li></li>
+            </ul>
+            <span class="rating">Рейтинг: 8,5</span>
+          </div>
         </div>
 
         <div class="hotels-item">
-          <img src="#" width="#" height="#" alt="Фото мотеля">
-          <a class="button" href="#">Подробнее</a>
-          <a class="button" href="#">Забронировать</a>
+          <div class="item-left">
+            <div class="hotel-photo">
+              <img src="#" width="#" height="#" alt="Фото мотеля">
+            </div>
+            <div class="description">
+              <h3>Desert Quail Inn</h3>
+              <span>Мотель</span>
+              <span>от 3000 Р.</span>
+              <a class="button" href="#">Подробнее</a>
+              <a class="button" href="#">Забронировать</a>
+            </div>
+          </div>
+          <div class="item-right">
+            <ul class="stars">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <span class="rating">Рейтинг: 8,9</span>
+          </div>
         </div>
 
         <div class="hotels-item">
-          <img src="#" width="#" height="#" alt="Фото аппартамент">
-          <a class="button" href="#">Подробнее</a>
-          <a class="button" href="#">Забронировать</a>
+          <div class="item-left">
+            <div class="hotel-photo">
+              <img src="#" width="#" height="#" alt="Фото аппартамент">
+            </div>
+            <div class="description">
+              <h3>Villas at Poco Diablo</h3>
+              <span>Аппартаменты</span>
+              <span>от 2000 Р.</span>
+              <a class="button" href="#">Подробнее</a>
+              <a class="button" href="#">Забронировать</a>
+            </div>
+          </div>
+          <div class="item-right">
+            <ul class="stars">
+              <li></li>
+              <li></li>
+            </ul>
+            <span class="rating">Рейтинг: 9,2</span>
+          </div>
         </div>
-
       </section>
-
-      <!-- Большой вопрос в оформлении блока справа - обозначение звёзд и рейтинга :(( -->
-
     </main>
+
     <footer class="main-footer">
       <div class="footer-left">
         <a href="#">#VISITSEDONA</a>
@@ -107,9 +155,6 @@
       <div class="footer-right">
         <p>WEBSITE BY <a href="https://htmlacademy.ru"><img src="#" width="#" height="#" alt="Логотип HTMLacademy"></a>
       </div>
-
-      <!-- Вопрос к блоку вцелом: 1. - уместность работы с дивами, 2. правильна ли формулировка классов 3. оформление -->
-
     </footer>
   </body>
 </html>
