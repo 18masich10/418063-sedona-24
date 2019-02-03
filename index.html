@@ -2,17 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Главная страница</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
+
+        <div class="main-header-logo">
+        <a class="cite-logo">
+          <img src="#" width="#" height="#" alt="Логотип сервиса по поиску отелей в Седоне">
+        </a>
+        </div>
+
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="photo_video.html">Фото и видео</a></li>
-          <li><a class="main-header-logo">
-            <img src="#" width="#" height="#" alt="Логотип сервиса по поиску отелей в Седоне">
-          </a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li class="site-navigation-current"><a href="catalog.html">Гостиницы</a></li>
         </ul>
@@ -24,8 +28,7 @@
       <h1 class="visually-hidden">Отели в Седоне</h1>
 
       <section class="intro">
-                    <!-- Так называемое вступление, как поняла делается в css. Исходя из макета, там нет отдельных шрифтов, а наложение фоновых изображений.
-                 Соответственно вопрос - надо в html как-то размечать, обозначать, что в этом месте будут подключены стили? или блок просто оставить пустым? -->
+
       </section>
 
       <section class="about_us">
@@ -35,7 +38,7 @@
 
       </section>
 
-      <section  class="features">                                   <!-- Откорректировала блок "преимущества", но есть вопросы -->
+      <section  class="features">
 
           <div class="features-item">
             <div class="description">
@@ -51,18 +54,17 @@
           <div  class="features-item">
             <ul class="features-list">
               <li>
-                <i class="fa fa-icon"></i>                                          <!-- Сломала голову в поисках актуальных статей по подключению иконок,
-                                                                                   везде через линк на сторонние ресурсы. Что почитать, если иконки в библеотеке?-->
+                <!-- иконка с помощью css -->
                 <h3>Жильё</h3>
                 <p>Рекомендуем пожить в настоящем <br> мотеле, всё как в кино!</p>
               </li>
               <li>
-                <i <!-- ? --> ></i>
+                <!-- иконка с помощью css -->
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь!</p>
               </li>
               <li>
-                <i <!-- ? --> ></i>
+                <!-- иконка с помощью css -->
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного <br> производства!</p>
               </li>
@@ -74,9 +76,7 @@
               <img src="#" width="#" height="#" alt="Изображение пейзажа в Седоне">
             </div>
             <div class="description">
-                <h3>Там есть <br> мост дьявола</h3>           <!-- Для разделения заголовка  и <p> (выше) на 2 строки использую <br>, но в какой-то
-                                                                   лекции слышала, что ими услекаться нестоит. Насколько он будет
-                                                            здесь уместен? Или потом при оформлении окна/рамки заголовок и <p> сам разделится под размер? :)) -->
+                <h3>Там есть <br> мост дьявола</h3>
                 <span>-№2-</span>
                 <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
@@ -124,12 +124,18 @@
         Т.е получается, что форма с выбором даты и тд наложена на фоновую картинку (карту) с указанием всех отелей на
          местности. Но могу ошибаться... -->
 
+        <!--
+      <img src="#" usermap="#имя карты">
+      <map name="имя карты">
+      <area атрибуты>
+      <area атрибуты>
+      </map> -->
 
       </section>
     </main>
     <footer class="main-footer">
       <div class="footer-left">
-        <a href="#">#VISITSEDONA</a>
+        <p><a href="#">#VISITSEDONA</a></p>
       </div>
 
       <div class="footer-middle">
