@@ -2,33 +2,36 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title>
+    <title>Седона: Главная страница</title>
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-
-        <div class="main-header-logo">
-        <a class="cite-logo">
-          <img src="#" width="#" height="#" alt="Логотип сервиса по поиску отелей в Седоне">
+        <a class="main-header-logo">
+          <img src="img/logo.svg" width="140" height="72" alt="Логотип сервиса по поиску отелей в Седоне">
         </a>
-        </div>
-
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="photo_video.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
-          <li class="site-navigation-current"><a href="catalog.html">Гостиницы</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="container">
 
-      <h1 class="visually-hidden">Отели в Седоне</h1>
+      <h1 class="visually-hidden">Седона</h1>
 
       <section class="intro">
+        <div class="background-intro">                                              <!-- Необходимо ли задавать каждому img свой класс? -->
+          <img src="img/background-intro.png" width="1200" height="800" alt="Фоновая заставка главной страницы">
+          <img src="img/polygon.svg" width="1201" height="59" alt="">               <!-- Данный img для декоратив целей, им же задавать alt не надо? -->
+        </div>
 
+        <div class="intro-word">
+          <img src="img/welcome.png" width="459" height="353" alt="Приветственное слово">
+        </div>
       </section>
 
       <section class="about_us">
@@ -47,7 +50,7 @@
               <p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь </p>
             </div>
             <div  class="sedona-photo">
-            <img src="#" width="#" height="#" alt="Изображение пейзажа в Седоне">
+            <img src="img/paysage-1.jpg" width="800" height="256" alt="Изображение пейзажа в Седоне">
             </div>
           </div>
 
@@ -73,7 +76,7 @@
 
           <div class="features-item">
             <div  class="sedona-photo">
-              <img src="#" width="#" height="#" alt="Изображение пейзажа в Седоне">
+              <img src="img/paysage-2.jpg" width="800" height="256" alt="Изображение пейзажа в Седоне">
             </div>
             <div class="description">
                 <h3>Там есть <br> мост дьявола</h3>
@@ -105,34 +108,22 @@
 
       <section class="apointment">
         <h2>Заинтересовались?</h2>
-        <p class="appointment-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
+          <p class="appointment-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
           гостиниц в Седоне </p>
-
         <form>
           <h3>Поиск гостиницы в Седоне</h3>
-
         <!-- Здесь будет форма -->
-
         </form>
 
-      </section>
-
-      <section class="contacts">
-        <h2 class="visually-hidden">Контактная информация</h2>
-
         <!-- Ещё раз пересмотрев макет в ФШ, поймала себя на мысли, что карта не выделяется отдельным блоком.
-        Т.е получается, что форма с выбором даты и тд наложена на фоновую картинку (карту) с указанием всех отелей на
-         местности. Но могу ошибаться... -->
+        Т.е получается, что форма с выбором даты и тд наложена на картинку (карту) с указанием всех отелей на
+         местности. Могу ошибаться... -->
 
-        <!--
-      <img src="#" usermap="#имя карты">
-      <map name="имя карты">
-      <area атрибуты>
-      <area атрибуты>
-      </map> -->
-
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <img src="img/map.jpg" width="1200" height="593" alt="Карта с координатами города">    <!-- Оборачивается ли карта в отдельный див или <p>? -->
       </section>
     </main>
+
     <footer class="main-footer">
       <div class="footer-left">
         <p><a href="#">#VISITSEDONA</a></p>
@@ -147,7 +138,7 @@
       </div>
 
       <div class="footer-right">
-        <p>WEBSITE BY <a href="https://htmlacademy.ru"><img src="#" width="#" height="#" alt="Логотип HTMLacademy"></a>
+        <p>WEBSITE BY <a href="https://htmlacademy.ru"><img src="img/logo_name.svg" width="115" height="41" alt="Логотип HTMLacademy"></a>
       </div>
 
     </footer>
