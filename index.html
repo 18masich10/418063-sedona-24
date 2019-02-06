@@ -24,12 +24,13 @@
       <h1 class="visually-hidden">Седона</h1>
 
       <section class="intro">
-        <div class="background-intro">                                              <!-- Необходимо ли задавать каждому img свой класс? -->
+        <h2 class="visually-hidden">Добро пожаловать!</h2>
+        <div class="background-intro">                                              <!-- Надо ли каждому img задавать свой класс для работы в будущем? (css) -->
           <img src="img/background-intro.png" width="1200" height="800" alt="Фоновая заставка главной страницы">
           <img src="img/polygon.svg" width="1201" height="59" alt="">               <!-- Данный img для декоратив целей, им же задавать alt не надо? -->
         </div>
 
-        <div class="intro-word">
+        <div class="intro-welcome">
           <img src="img/welcome.png" width="459" height="353" alt="Приветственное слово">
         </div>
       </section>
@@ -57,17 +58,14 @@
           <div  class="features-item">
             <ul class="features-list">
               <li>
-                <!-- иконка с помощью css -->
                 <h3>Жильё</h3>
                 <p>Рекомендуем пожить в настоящем <br> мотеле, всё как в кино!</p>
               </li>
               <li>
-                <!-- иконка с помощью css -->
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь!</p>
               </li>
               <li>
-                <!-- иконка с помощью css -->
                 <h3>Сувениры</h3>
                 <p>Не только китайского, но и местного <br> производства!</p>
               </li>
@@ -110,17 +108,41 @@
         <h2>Заинтересовались?</h2>
           <p class="appointment-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
           гостиниц в Седоне </p>
-        <form>
+
           <h3>Поиск гостиницы в Седоне</h3>
-        <!-- Здесь будет форма -->
-        </form>
+
+            <form class="apointment-form" action="#" method="post">                        <!-- В нашем случае, форма - не всплывающее окно?  -->
+              <fieldset>
+                <p class="apointment-item">
+                  <label for="arrival">Дата заезда:</label>
+                  <input type="date" name="date-arrival" id="arrival" required>            <!-- Вопрос в "подсказке" внутри поля. При использовании типа - дата,
+                                                                                               оформление цифрами, а в макете - цифры + текст  -->
+                </p>
+                <p class="apointment-item">
+                  <label for="departure">Дата выезда:</label>
+                  <input type="date" name="date-departure" id="departure" required>
+                </p>
+                <p class="apointment-item">
+                  <label for="grown">Взрослые:</label>
+                  <input type="number" name="people-grown" id="grown" step="1" tabindex="3">
+                </p>
+                <p class="apointment-item">
+                  <label for="children">Дети:</label>
+                  <input type="number" name="people-children" id="children" step="1" tabindex="4" >
+                </p>
+                <p class="apointment-item">
+                  <button class="button" type="submit" tabindex="5">Найти</button>    <!-- Сомнение - кнопка выносится за fieldset или нет -->
+                </p>
+              </fieldset>
+
+            </form>
 
         <!-- Ещё раз пересмотрев макет в ФШ, поймала себя на мысли, что карта не выделяется отдельным блоком.
-        Т.е получается, что форма с выбором даты и тд наложена на картинку (карту) с указанием всех отелей на
+        Т.е получается, что форма с выбором даты и тд наложена на картинку (карту) с указанием города на
          местности. Могу ошибаться... -->
 
         <h2 class="visually-hidden">Контактная информация</h2>
-        <img src="img/map.jpg" width="1200" height="593" alt="Карта с координатами города">    <!-- Оборачивается ли карта в отдельный див или <p>? -->
+        <img src="img/map.jpg" width="1200" height="593" alt="Седона расположена в 162 км на север от Финикса, столицы Аризоны">    <!-- Оборачивается ли карта в отдельный див или <p>? -->
       </section>
     </main>
 
@@ -138,7 +160,9 @@
       </div>
 
       <div class="footer-right">
-        <p>WEBSITE BY <a href="https://htmlacademy.ru"><img src="img/logo_name.svg" width="115" height="41" alt="Логотип HTMLacademy"></a>
+        <p>WEBSITE BY <a href="https://htmlacademy.ru">
+          <img src="img/logo_name.svg" width="115" height="41" alt="Логотип HTMLacademy"></a>
+        </p>
       </div>
 
     </footer>

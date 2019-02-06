@@ -21,156 +21,166 @@
     </header>
     <main class="container">
       <h1 class="visually-hidden">Отели в Седоне</h1>
-      <img src="img/background-filter.jpg" width="1200" height="562" alt="Фоновое изображение под фильтрами">  <!-- Так же - необходимо ли задавать img свой класс? -->
-                                                                                                               <!-- Оборачивается ли img в отдельный див или <p>? -->
-      <section class="filters">
-        <h2 class="visually-hidden">Фильтр жилья</h2>
+      <h2 class="visually-hidden">Фильтр жилья</h2>
 
-        <form action="#" method="get">
+      <img src="img/background-filter.jpg" width="1200" height="562" alt="Фоновое изображение под фильтрами">
 
-          <fieldset>
+        <form class="filters-form" action="#" method="get">
+
+          <fieldset class="left">
             <legend>Инфраструктура:</legend>
-
-            <input type="checkbox" name="option1" id="pool" checked>
-            <label for="pool">Бассейн</label>
-            <br>
-            <input type="checkbox" name="option1" id="parking">
-            <label for="parking">Парковка</label>
-            <br>
-            <input type="checkbox" name="option1" id="wi-fi">
-            <label for="wi-fi">Wi-Fi</label>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="option1" id="pool" checked>
+                <label for="pool">Бассейн</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="option1" id="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="option1" id="wi-fi">
+                <label for="wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="middle">
             <legend>Тип жилья:</legend>
-
-            <input type="checkbox" name="option2" id="hotel" checked>
-            <label for="hotel">Гостиница</label>
-            <br>
-            <input type="checkbox" name="option2" id="motel" checked>
-            <label for="motel">Мотель</label>
-            <br>
-            <input type="checkbox" name="option2" id="apartments" checked>
-            <label for="apartments">Апартаменты</label>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="option2" id="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="option2" id="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="option2" id="apartments" checked>
+                <label for="apartments">Апартаменты</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="right">
             <legend>Стоимость в сутки (Р):</legend>
 
-            <input type="range" min="0" max="3000">   <!-- Вопрос на будущее и "наподумать" - доп рамка сверху бегунка -->
+            <input type="range" min="0" max="3000" step="500">   <!-- Вопрос на будущее и "наподумать" - доп рамка сверху бегунка -->
             <br>
-            <input type="submit" value="Показать">
+            <button class="filter-button" type="submit">Показать</button>
           </fieldset>
         </form>
-      </section>
-
-      <section>
-        <!-- !!! Блок под ранжирование/сортировку по типу, цене, рейтинку. Вопросы по оформлению/кликабельности -->
 
 
-      </section>
+        <section>
+         <h2 class="visually-hidden">Сортировка и ранжирование жилья</h2>
 
-      <section class="catalog">
-        <h2 class="visually-hidden">Список жилья</h2>
-          <div class="catalog-item">
 
-            <div class="item-left">
-              <div class="description-catalog-item">
-                <h3>
-                  <a href="#">Amara Resort & Spa</a>
-                </h3>                                                                               <!-- Стоит ли название гостиницы делать ссылкой? -->
-                  <span>Гостиница</span>
-                  <span>от 4000 Р.</span>
-                <a class="button" href="#">Подробнее</a>
-                <a class="button" href="#">Забронировать</a>
-              </div>
+        </section>
 
-              <div class="catalog-item-image">
-                <p>
-                  <a href="#">
-                    <img src="img/housing-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">     <!-- Стоит ли картинку гостиницы делать ссылкой? -->
-                  </a>
-                </p>
-              </div>
-            </div>
+        <section class="catalog">
+          <h2 class="visually-hidden">Список жилья</h2>
+            <ul class="catalog-list">
+              <li class="catalog-item">
 
-            <div class="item-right">
-              <ul class="stars">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <span class="rating">Рейтинг: 8,5</span>
-            </div>
-          </div>
+                <div class="item-left">
+                  <div class="description-catalog-item">
+                    <h3>
+                      <a href="#">Amara Resort & Spa</a>
+                    </h3>
+                      <span>Гостиница</span>
+                      <span>от 4000 Р.</span>
+                    <a class="button" href="#">Подробнее</a>
+                    <a class="button" href="#">Забронировать</a>
+                  </div>
 
-          <div class="catalog-item">
+                  <div class="catalog-item-image">
+                    <p>
+                      <a href="#">
+                        <img src="img/housing-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
+                      </a>
+                    </p>
+                  </div>
+                </div>
 
-            <div class="item-left">
-              <div class="description-catalog-item">
-                <h3>
-                  <a href="#">Desert Quail Inn</a>
-                </h3>
-                  <span>Мотель</span>
-                  <span>от 3000 Р.</span>
-                <a class="button" href="#">Подробнее</a>
-                <a class="button" href="#">Забронировать</a>
-              </div>
+                <div class="item-right">
+                  <ul class="stars">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <span class="rating">Рейтинг: 8,5</span>
+                </div>
+              </li>
+              <li class="catalog-item">
 
-              <div class="catalog-item-image">
-                <p>
-                  <a href="#">
-                    <img src="img/housing-2.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
-                  </a>
-                </p>
-              </div>
-            </div>
+                <div class="item-left">
+                  <div class="description-catalog-item">
+                    <h3>
+                      <a href="#">Desert Quail Inn</a>
+                    </h3>
+                      <span>Мотель</span>
+                      <span>от 3000 Р.</span>
+                    <a class="button" href="#">Подробнее</a>
+                    <a class="button" href="#">Забронировать</a>
+                  </div>
 
-            <div class="item-right">
-              <ul class="stars">
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <span class="rating">Рейтинг: 8,9</span>
-            </div>
-          </div>
+                  <div class="catalog-item-image">
+                    <p>
+                      <a href="#">
+                        <img src="img/housing-2.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
+                      </a>
+                    </p>
+                  </div>
+                </div>
 
-        <div class="catalog-item">
+                <div class="item-right">
+                  <ul class="stars">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <span class="rating">Рейтинг: 8,9</span>
+                </div>
+              </li>
+              <li class="catalog-item">
 
-          <div class="item-left">
-            <div class="description-catalog-item">
-              <h3>
-                <a href="#">Villas at Poco Diablo</a>
-              </h3>
-                <span>Аппартаменты</span>
-                <span>от 2000 Р.</span>
-              <a class="button" href="#">Подробнее</a>
-              <a class="button" href="#">Забронировать</a>
-            </div>
+                <div class="item-left">
+                  <div class="description-catalog-item">
+                    <h3>
+                      <a href="#">Villas at Poco Diablo</a>
+                    </h3>
+                      <span>Аппартаменты</span>
+                      <span>от 2000 Р.</span>
+                    <a class="button" href="#">Подробнее</a>
+                    <a class="button" href="#">Забронировать</a>
+                  </div>
 
-            <div class="catalog-item-image">
-              <p>
-                <a href="#">
-                  <img src="img/housing-3.jpg" width="135" height="90" alt="Фото аппартамент Villas at Poco Diablo">
-                </a>
-              </p>
-            </div>
-          </div>
+                  <div class="catalog-item-image">
+                    <p>
+                      <a href="#">
+                        <img src="img/housing-3.jpg" width="135" height="90" alt="Фото аппартамент Villas at Poco Diablo">
+                      </a>
+                    </p>
+                  </div>
+                </div>
 
-          <div class="item-right">
-            <ul class="stars">
-              <li></li>
-              <li></li>
+                <div class="item-right">
+                  <ul class="stars">
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <span class="rating">Рейтинг: 9,2</span>
+                </div>
+              </li>
             </ul>
-            <span class="rating">Рейтинг: 9,2</span>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     <footer class="main-footer">
+
       <div class="footer-left">
         <p><a href="#">#VISITSEDONA</a></p>
       </div>
@@ -184,7 +194,9 @@
       </div>
 
       <div class="footer-right">
-        <p>WEBSITE BY <a href="https://htmlacademy.ru"><img src="img/logo_name.svg" width="115" height="41" alt="Логотип HTMLacademy"></a>
+        <p>WEBSITE BY <a href="https://htmlacademy.ru">
+          <img src="img/logo_name.svg" width="115" height="41" alt="Логотип HTMLacademy"></a>
+        </p>
       </div>
     </footer>
   </body>
