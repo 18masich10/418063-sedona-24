@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Седона: Главная страница</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -27,7 +30,7 @@
         <h2 class="visually-hidden">Добро пожаловать!</h2>
         <div class="background-intro">                                              <!-- Надо ли каждому img задавать свой класс для работы в будущем? (css) -->
           <img src="img/background-intro.png" width="1200" height="800" alt="Фоновая заставка главной страницы">
-          <img src="img/polygon.svg" width="1201" height="59" alt="">               <!-- Данный img для декоратив целей, им же задавать alt не надо? -->
+         <!-- <img src="img/polygon.svg" width="1201" height="59" alt=""> - Данный элемент вставляется как img c классом или через css? -->
         </div>
 
         <div class="intro-welcome">
@@ -35,14 +38,14 @@
         </div>
       </section>
 
-      <section class="about_us">
+      <section class="about-us">
         <h2 class="visually-hidden">О нас</h2>
         <b>Седона - небольшой городок в Аризоне, <br> заслуживающий большего!</b>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон</p>
 
       </section>
 
-      <section  class="features">                                                        <!-- Разметка секции? -->
+      <section  class="features">                                                        <!-- Разметка секции? В сss данный блок не делала -->
         <h2 class="visually-hidden">Преимущества</h2>
           <div class="features-item">
             <div class="description">
@@ -105,16 +108,16 @@
       </section>
 
       <section class="apointment">
+        <h2>Заинтересовались?</h2>
           <p class="appointment-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
           гостиниц в Седоне </p>
+            <form class="apointment-form" action="#" method="post">
+              <h3>Поиск гостиницы в Седоне</h3>
 
-          <h3>Поиск гостиницы в Седоне</h3>
-
-            <form class="apointment-form" action="#" method="post">                        <!-- В нашем случае, форма - не всплывающее окно?  -->
               <fieldset>
                 <p class="apointment-item">
                   <label for="arrival">Дата заезда:</label>
-                  <input type="date" name="date-arrival" id="arrival" required autofocus>            <!-- Вопрос в "подсказке" внутри поля. При использовании типа - дата,
+                  <input type="date" name="date-arrival" id="arrival" required>            <!-- Вопрос в "подсказке" внутри поля. При использовании типа - дата,
                                                                                                оформление цифрами, а в макете - цифры + текст  -->
                 </p>
                 <p class="apointment-item">
