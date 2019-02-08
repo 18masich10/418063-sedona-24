@@ -3,6 +3,9 @@
   <head>
       <meta charset="UTF-8">
       <title>Седона:  Гостиницы</title>
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+      <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -19,15 +22,16 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
-      <h1 class="visually-hidden">Отели в Седоне</h1>
-      <h2 class="visually-hidden">Фильтр жилья</h2>
+    <main class="container-page">
+      <section class="filters">
+        <h1 class="visually-hidden">Отели в Седоне</h1>
+        <h2 class="visually-hidden">Фильтр жилья</h2>
 
-      <img src="img/background-filter.jpg" width="1200" height="562" alt="Фоновое изображение под фильтрами">
+          <img src="img/background-filter.jpg" width="1200" height="562" alt="Фоновое изображение под фильтрами">
 
         <form class="filters-form" action="#" method="get">
 
-          <fieldset class="left">
+          <fieldset class="left-item">
             <legend>Инфраструктура:</legend>
             <ul>
               <li class="filter-option">
@@ -45,7 +49,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="middle">
+          <fieldset class="middle-item">
             <legend>Тип жилья:</legend>
             <ul>
               <li class="filter-option">
@@ -63,7 +67,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="right">
+          <fieldset class="right-item">
             <legend>Стоимость в сутки (Р):</legend>
 
             <input type="range" min="0" max="3000" step="500">   <!-- Вопрос на будущее и "наподумать" - доп рамка сверху бегунка -->
@@ -72,22 +76,23 @@
           </fieldset>
         </form>
 
-
-        <section>
-         <h2 class="visually-hidden">Сортировка и ранжирование жилья</h2>
-
-         <span class="search">Найдено: 3</span>
-         <span>Сортировка:</span>     <!-- Необходимый класс для спан-->
-
-          <a>по цене актив</a>
-          <a>по типу</a>                         <!-- Вопрос вцелом по этому блоку -->
-          <a>по рейтингу</a>
-
-          <a>треугольник вверх</a>
-          <a>треугольник вниз актив</a>
         </section>
-
         <section class="catalog">
+
+         <h2 class="visually-hidden">Сортировка и ранжирование жилья</h2>
+         <div>
+           <span class="search">Найдено: 3</span>
+           <span class="sorting">Сортировка:</span>
+            <ul class="sorting-list">
+              <li><a class="price" href="#">по цене</a></li>
+              <li><a class="type" href="#">по типу</a></li>                     <!-- Вопрос вцелом по этому блоку: ссылки ли это? куда они могу вести? -->
+              <li><a class="rating" href="#">по рейтингу</a></li>
+            </ul>
+            <!--    <a>треугольник вверх</a>
+                    <a>треугольник вниз </a>  -->
+          </div>
+
+          <div>
           <h2 class="visually-hidden">Список жилья</h2>
             <ul class="catalog-list">
               <li class="catalog-item">
@@ -99,8 +104,8 @@
                     </h3>
                       <span>Гостиница</span>
                       <span>от 4000 Р.</span>
-                    <a class="button" href="#">Подробнее</a>
-                    <a class="button" href="#">Забронировать</a>
+                    <a class="button button-detail" href="#">Подробнее</a>
+                    <a class="button button-reserved" href="#">Забронировать</a>
                   </div>
 
                   <div class="catalog-item-image">
@@ -119,7 +124,7 @@
                     <li></li>
                     <li></li>
                   </ul>
-                  <span class="rating">Рейтинг: 8,5</span>
+                  <span class="grade">Рейтинг: 8,5</span>
                 </div>
               </li>
               <li class="catalog-item">
@@ -131,8 +136,8 @@
                     </h3>
                       <span>Мотель</span>
                       <span>от 3000 Р.</span>
-                    <a class="button" href="#">Подробнее</a>
-                    <a class="button" href="#">Забронировать</a>
+                    <a class="button button-detail" href="#">Подробнее</a>
+                    <a class="button button-reserved" href="#">Забронировать</a>
                   </div>
 
                   <div class="catalog-item-image">
@@ -150,7 +155,7 @@
                     <li></li>
                     <li></li>
                   </ul>
-                  <span class="rating">Рейтинг: 8,9</span>
+                  <span class="grade">Рейтинг: 8,9</span>
                 </div>
               </li>
               <li class="catalog-item">
@@ -162,8 +167,8 @@
                     </h3>
                       <span>Аппартаменты</span>
                       <span>от 2000 Р.</span>
-                    <a class="button" href="#">Подробнее</a>
-                    <a class="button" href="#">Забронировать</a>
+                    <a class="button button-detail" href="#">Подробнее</a>
+                    <a class="button button-reserved" href="#">Забронировать</a>
                   </div>
 
                   <div class="catalog-item-image">
@@ -180,10 +185,11 @@
                     <li></li>
                     <li></li>
                   </ul>
-                  <span class="rating">Рейтинг: 9,2</span>
+                  <span class="grade">Рейтинг: 9,2</span>
                 </div>
               </li>
             </ul>
+          </div>
         </section>
     </main>
 
