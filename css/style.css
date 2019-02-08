@@ -1,0 +1,345 @@
+body {
+  margin: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+
+}
+
+a {
+  text-decoration: none;
+}
+/* header
+   main-header */
+
+.main-navigation {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.site-navigation {
+  list-style: none;
+  text-align: center;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover {
+  color: #81b3d2;
+}
+
+.site-navigation a:focus {
+  color: #cacaca;
+}
+.site-navigation a:active {
+  color: #766357;
+}
+/* main
+    container */
+
+.container .intro {
+
+  background-color: #46b3f6;
+}
+
+.container-page .filters {
+  color: #ffffff;
+  background-color: #46b3f6;
+}
+
+.left-item legend,
+.middle-item legend,
+.right-item legend {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.filter-option {
+  list-style: none;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.about-us b {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.about-us p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #333333;
+}
+
+.features-item .description {
+
+  background-color: #81b3d2;
+}
+
+.features-item .description h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.features-item .description span, p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.features-item .features-list {
+  list-style: none;
+
+}
+
+.features-list {
+  text-align: center;
+}
+
+.catalog {
+  background-color: #fefefe;
+}
+
+.catalog .search {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+.catalog .sorting {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #000000;
+}
+
+.sorting-list li {
+  list-style: none;
+  text-align: center;
+}
+
+.sorting-list a {
+  color: #b2b2b2;
+  border-bottom: 1px dashed #81b3d2;
+
+}
+
+.sorting-list a:hover {
+  border-bottom: none;
+  color: #81b3d2;
+}
+
+.sorting-list a:active {
+  border-bottom: none;
+  color: #000000;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.description-catalog-item h3 a {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.description-catalog-item h3 a:hover {
+  color: #81b3d2;
+}
+
+.description-catalog-item h3 a:active {
+  color: #cacaca;
+}
+
+.description-catalog-item span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+}
+
+.description-catalog-item .button-detail {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.description-catalog-item .button-reserved {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: #766357;
+}
+
+.description-catalog-item .button-detail:hover {
+  color: #ffffff;
+  background-color: #669ec0;
+}
+
+.description-catalog-item .button-reserved:hover {
+  color: #ffffff;
+  background-color: #604e43;
+}
+
+.description-catalog-item .button-detail:active {
+  color: #85b0cd;
+  background-color: #5496bd;
+}
+
+.description-catalog-item .button-reserved:active {
+  color: #857871;
+  background-color: #503e33;
+}
+
+.stars {
+  list-style: none;
+}
+
+.grade {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #666666;
+  background-color: #f2f2f2;
+}
+
+.apointment h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #000000;
+}
+
+.apointment p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333333;
+}
+
+.apointment h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #ffffff;
+
+  background-color: #766357;
+}
+
+.apointment h3:hover {
+  color: #ffffff;
+  background-color: #604e43;
+}
+
+.apointment h3:active{
+  color: #928a85;
+  background-color: #503e33;
+}
+
+.apointment-item label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.apointment-item input[type="date"],
+.apointment-item input[type="number"] {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.apointment-item input:hover {
+  color: #000000;
+  background-color: #ebebeb;
+}
+
+.apointment-item input:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.apointment-item .button {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+  border: none;
+}
+
+.apointment-item .button:hover {
+  color: #ffffff;
+  background-color: #669ec0;
+}
+
+.apointment-item .button:active {
+  color: #88b6d1;
+  background-color: #5496bd;
+}
+
+/* footer
+   main-footer*/
+
+.main-footer {
+
+  color: #000000;
+  background-color: #fdfdfd;
+  background-position: 0 0;
+  background-repeat: repeat;
+
+}
+
+.footer-left a {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.footer-middle li {
+  list-style: none;
+  text-align: center;
+}
+
+.footer-right p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #000000;
+}
+.social-button {
+  color: #000000;
+}
+
+
+
