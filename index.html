@@ -42,8 +42,8 @@
 
       </section>
 
-      <section  class="features">
-
+      <section  class="features">                                                        <!-- Разметка секции? -->
+        <h2 class="visually-hidden">Преимущества</h2>
           <div class="features-item">
             <div class="description">
               <h3>Настоящий городок</h3>
@@ -51,7 +51,7 @@
               <p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь </p>
             </div>
             <div  class="sedona-photo">
-            <img src="img/paysage-1.jpg" width="800" height="256" alt="Изображение пейзажа в Седоне">
+              <img src="img/paysage-1.jpg" width="800" height="256" alt="Изображение пейзажа в Седоне">
             </div>
           </div>
 
@@ -105,7 +105,6 @@
       </section>
 
       <section class="apointment">
-        <h2>Заинтересовались?</h2>
           <p class="appointment-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
           гостиниц в Седоне </p>
 
@@ -115,7 +114,7 @@
               <fieldset>
                 <p class="apointment-item">
                   <label for="arrival">Дата заезда:</label>
-                  <input type="date" name="date-arrival" id="arrival" required>            <!-- Вопрос в "подсказке" внутри поля. При использовании типа - дата,
+                  <input type="date" name="date-arrival" id="arrival" required autofocus>            <!-- Вопрос в "подсказке" внутри поля. При использовании типа - дата,
                                                                                                оформление цифрами, а в макете - цифры + текст  -->
                 </p>
                 <p class="apointment-item">
@@ -124,11 +123,11 @@
                 </p>
                 <p class="apointment-item">
                   <label for="grown">Взрослые:</label>
-                  <input type="number" name="people-grown" id="grown" step="1" tabindex="3">
+                  <input type="number" name="people-grown" id="grown">
                 </p>
                 <p class="apointment-item">
                   <label for="children">Дети:</label>
-                  <input type="number" name="people-children" id="children" step="1" tabindex="4" >
+                  <input type="number" name="people-children" id="children">
                 </p>
                 <p class="apointment-item">
                   <button class="button" type="submit" tabindex="5">Найти</button>    <!-- Сомнение - кнопка выносится за fieldset или нет -->
