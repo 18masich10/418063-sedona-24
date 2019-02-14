@@ -1,172 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Седона: Главная страница</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="img/logo.svg" width="140" height="72" alt="Логотип сервиса по поиску отелей в Седоне">
-        </a>
+<head>
+  <meta charset="utf-8">
+  <title>Седона: Главная страница</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header class="main-header">
+  <nav class="main-navigation">
+    <a class="main-header-logo">
+      <img src="img/logo.svg" width="140" height="72" alt="Логотип сервиса по поиску отелей в Седоне">
+    </a>
+    <div class="main-navigation-wrapper">
+      <div class="container-navigation">
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="photo_video.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
-      </nav>
-    </header>
-
-    <main class="container">
-
-      <h1 class="visually-hidden">Седона</h1>
-
-      <section class="intro">
-        <h2 class="visually-hidden">Добро пожаловать!</h2>
-        <div class="background-intro">                                              <!-- Надо ли каждому img задавать свой класс для работы в будущем? (css) -->
-          <img src="img/background-intro.png" width="1200" height="800" alt="Фоновая заставка главной страницы">
-         <!-- <img src="img/polygon.svg" width="1201" height="59" alt=""> - Данный элемент вставляется как img c классом или через css? -->
-        </div>
-
-        <div class="intro-welcome">
-          <img src="img/welcome.png" width="459" height="353" alt="Приветственное слово">
-        </div>
-      </section>
-
-      <section class="about-us">
-        <h2 class="visually-hidden">О нас</h2>
-        <b>Седона - небольшой городок в Аризоне, <br> заслуживающий большего!</b>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон</p>
-
-      </section>
-
-      <section  class="features">                                                        <!-- Разметка секции? В сss данный блок не делала -->
-        <h2 class="visually-hidden">Преимущества</h2>
-          <div class="features-item">
-            <div class="description">
-              <h3>Настоящий городок</h3>
-              <span>-№1-</span>
-              <p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь </p>
-            </div>
-            <div  class="sedona-photo">
-              <img src="img/paysage-1.jpg" width="800" height="256" alt="Изображение пейзажа в Седоне">
-            </div>
-          </div>
-
-          <div  class="features-item">
-            <ul class="features-list">
-              <li>
-                <h3>Жильё</h3>
-                <p>Рекомендуем пожить в настоящем <br> мотеле, всё как в кино!</p>
-              </li>
-              <li>
-                <h3>Еда</h3>
-                <p>Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь!</p>
-              </li>
-              <li>
-                <h3>Сувениры</h3>
-                <p>Не только китайского, но и местного <br> производства!</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="features-item">
-            <div  class="sedona-photo">
-              <img src="img/paysage-2.jpg" width="800" height="256" alt="Изображение пейзажа в Седоне">
-            </div>
-            <div class="description">
-                <h3>Там есть <br> мост дьявола</h3>
-                <span>-№2-</span>
-                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            </div>
-          </div>
-
-          <div class="features-item">
-            <ul class="features-list">
-              <li>
-                <h3>Небольшая <br> площадь</h3>
-                <span>-№3-</span>
-                <p>Все достопримечательности <br> находятся очень близко </p>
-              </li>
-              <li>
-                <h3>Красивая <br> дорога</h3>
-                <span>-№4-</span>
-                <p>Ехать в Седону из Лас-Вегаса совсем <br> не скучно! </p>
-              </li>
-              <li>
-                <h3>Мало <br> туристов </h3>
-                <span>-№5-</span>
-                <p>Большинство едет в Гранд Каньон <br> и толпится там </p>
-              </li>
-            </ul>
-          </div>
-      </section>
-
-      <section class="apointment">
-        <h2>Заинтересовались?</h2>
-          <p class="appointment-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
-          гостиниц в Седоне </p>
-            <form class="apointment-form" action="#" method="post">
-              <h3>Поиск гостиницы в Седоне</h3>
-
-              <fieldset>
-                <p class="apointment-item">
-                  <label for="arrival">Дата заезда:</label>
-                  <input type="date" name="date-arrival" id="arrival" required>            <!-- Вопрос в "подсказке" внутри поля. При использовании типа - дата,
-                                                                                               оформление цифрами, а в макете - цифры + текст  -->
-                </p>
-                <p class="apointment-item">
-                  <label for="departure">Дата выезда:</label>
-                  <input type="date" name="date-departure" id="departure" required>
-                </p>
-                <p class="apointment-item">
-                  <label for="grown">Взрослые:</label>
-                  <input type="number" name="people-grown" id="grown">
-                </p>
-                <p class="apointment-item">
-                  <label for="children">Дети:</label>
-                  <input type="number" name="people-children" id="children">
-                </p>
-                <p class="apointment-item">
-                  <button class="button" type="submit" tabindex="5">Найти</button>    <!-- Сомнение - кнопка выносится за fieldset или нет -->
-                </p>
-              </fieldset>
-
-            </form>
-
-        <!-- Ещё раз пересмотрев макет в ФШ, поймала себя на мысли, что карта не выделяется отдельным блоком.
-        Т.е получается, что форма с выбором даты и тд наложена на картинку (карту) с указанием города на
-         местности. Могу ошибаться... -->
-
-        <h2 class="visually-hidden">Контактная информация</h2>
-        <img src="img/map.jpg" width="1200" height="593" alt="Седона расположена в 162 км на север от Финикса, столицы Аризоны">    <!-- Оборачивается ли карта в отдельный див или <p>? -->
-      </section>
-    </main>
-
-    <footer class="main-footer">
-      <div class="footer-left">
-        <p><a href="#">#VISITSEDONA</a></p>
       </div>
+    </div>
+  </nav>
+</header>
 
-      <div class="footer-middle">
-        <ul class="social">
-          <li><a class="social-button" href="#">Твитер</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Ютуб</a></li>
-        </ul>
+<main class="container">
+
+<h1 class="visually-hidden">Седона</h1>
+
+  <section class="intro">
+  <h2 class="visually-hidden">Добро пожаловать!</h2>
+    <div class="background-intro">
+      <img src="img/intro-photo.png" width="1200" height="780" alt="Фоновая заставка главной страницы">
+    </div>
+  </section>
+
+  <section class="about-us">
+    <h2 class="visually-hidden">О нас</h2>
+    <b>Седона - небольшой городок в Аризоне, <br> заслуживающий большего!</b>
+    <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон</p>
+
+  </section>
+
+  <section class="features">
+     <h2 class="visually-hidden">Преимущества</h2>
+    <div class="features-item">
+      <div class="description">
+        <h3>Настоящий городок</h3>
+        <span>-№1-</span>
+        <p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь </p>
       </div>
+      <div class="sedona-photo">
+        <img src="img/paysage-1.jpg" width="800" height="256" alt="Изображение пейзажа в Седоне">
+      </div>
+    </div>
 
-      <div class="footer-right">
-        <p>WEBSITE BY <a href="https://htmlacademy.ru">
-          <img src="img/logo_name.svg" width="115" height="41" alt="Логотип HTMLacademy"></a>
+    <div class="features-item">
+      <ul class="features-list-one">
+        <li class="home">
+          <h3>Жильё</h3>
+          <p>Рекомендуем пожить в настоящем <br> мотеле, всё как в кино!</p>
+        </li>
+        <li class="food">
+          <h3>Еда</h3>
+          <p>Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь!</p>
+        </li>
+        <li class="souvenirs">
+          <h3>Сувениры</h3>
+          <p>Не только китайского, но и местного <br> производства!</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="features-item">
+      <div class="sedona-photo">
+        <img src="img/paysage-2.jpg" width="800" height="256" alt="Изображение пейзажа в Седоне">
+      </div>
+      <div class="description">
+        <h3>Там есть <br> мост дьявола</h3>
+        <span>-№2-</span>
+        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      </div>
+    </div>
+
+    <div class="features-item">
+      <ul class="features-list-two">
+        <li class="area">
+          <h3>Небольшая <br> площадь</h3>
+          <span>-№3-</span>
+          <p>Все достопримечательности <br> находятся очень близко </p>
+        </li>
+        <li class="road">
+          <h3>Красивая <br> дорога</h3>
+          <span>-№4-</span>
+          <p>Ехать в Седону из Лас-Вегаса совсем <br> не скучно! </p>
+        </li>
+        <li class="tourists">
+          <h3>Мало <br> туристов </h3>
+          <span>-№5-</span>
+          <p>Большинство едет в Гранд Каньон <br> и толпится там </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="apointment">
+    <div class="apointment-title">
+      <h2>Заинтересовались?</h2>
+      <p class="appointment-info">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
+        гостиниц в Седоне </p>
+    </div>
+     <h2 class="visually-hidden">Контактная информация</h2>
+    <div class="map">
+      <img src="img/map.jpg" width="1200" height="593" alt="Седона расположена в 162 км на север от Финикса, столицы Аризоны">
+    </div>
+    <form class="apointment-form" action="#" method="post">
+      <h3>Поиск гостиницы в Седоне</h3>
+
+      <fieldset class="#">
+        <p class="apointment-item">
+          <label for="arrival">Дата заезда:</label>
+          <input type="date" name="date-arrival" id="arrival" required>
         </p>
-      </div>
+        <p class="apointment-item">
+          <label for="departure">Дата выезда:</label>
+          <input type="date" name="date-departure" id="departure" required>
+        </p>
+        <p class="apointment-item">
+          <label for="grown">Взрослые:</label>
+          <input type="number" name="people-grown" id="grown">
 
-    </footer>
-  </body>
+
+          <label for="children">Дети:</label>
+          <input type="number" name="people-children" id="children">
+        </p>
+        <p class="apointment-item">
+          <button class="button" type="submit" tabindex="5">Найти</button>
+        </p>
+      </fieldset>
+
+    </form>
+
+  </section>
+</main>
+
+<footer class="main-footer">
+  <div class="footer-page">
+    <div class="footer-left">
+      <p><a href="#">#VISITSEDONA</a></p>
+    </div>
+
+    <div class="footer-middle">
+      <ul class="social">
+        <li><a class="social-button" href="#">Твитер</a></li>
+        <li><a class="social-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button" href="#">Ютуб</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <p>WEBSITE BY <a href="https://htmlacademy.ru">
+        <img src="img/logo_name.svg" width="115" height="41" alt="Логотип HTMLacademy"></a>
+      </p>
+    </div>
+  </div>
+
+</footer>
+</body>
 </html>
