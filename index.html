@@ -33,7 +33,7 @@
   <section class="intro">
   <h2 class="visually-hidden">Добро пожаловать!</h2>
     <div class="background-intro">
-      <img src="img/intro-photo.png" width="1200" height="780" alt="Фоновая заставка главной страницы">
+      <img src="img/intro-photo.png" width="1200" height="545" alt="Фоновая заставка главной страницы">
     </div>
   </section>
 
@@ -48,7 +48,7 @@
      <h2 class="visually-hidden">Преимущества</h2>
     <div class="features-item">
       <div class="description">
-        <h3>Настоящий городок</h3>
+        <h3>Настоящий<br> городок</h3>
         <span>-№1-</span>
         <p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь </p>
       </div>
@@ -118,9 +118,9 @@
       <h3><a class="button-apointment" href="#">Поиск гостиницы в Седоне</a></h3>
 
       <fieldset class="apointment-container modal-apointment">
-        <p class="apointment-item">
+        <div class="apointment-item">
           <label for="arrival">Дата заезда:</label>
-          <input id="arrival" type="date" name="date-arrival" required>
+          <input id="arrival" type="text" name="date-arrival" placeholder="24 апреля 2017" required>
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
               <g id="calendar_1_">
@@ -142,10 +142,10 @@
                 <rect x="13.781" y="8.225" width="2.625" height="2.066"/>
               </g>
           </svg>
-        </p>
-        <p class="apointment-item">
+        </div>
+        <div class="apointment-item">
           <label for="departure">Дата выезда:</label>
-          <input id="departure" type="date" name="date-departure" required>
+          <input id="departure" type="text" name="date-departure" placeholder="4 июля 2017" required>
           <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
               <g id="calendar_2_">
@@ -167,19 +167,25 @@
                 <rect x="13.781" y="8.225" width="2.625" height="2.066"/>
               </g>
           </svg>
-        </p>
-        <p class="apointment-item-people">
-          <label for="grown">Взрослые:</label>
-          <input type="number" name="people-grown" id="grown">
+        </div>
+        <div class="apointment-item-people">
+          <div class="people-grown">
+            <label for="grown">Взрослые:</label>
+            <button class="button-change button-minus" type="button">-</button>
+            <input type="text" name="people-grown" id="grown" value="2">
+            <button class="button-change button-plus" type="button">+</button>
+          </div>
 
-
-          <label for="children">Дети:</label>
-
-          <input type="number" name="people-children" id="children">
-        </p>
-        <p class="apointment-item">
+          <div class="people-children">
+            <label for="children">Дети:</label>
+            <button class="button-change button-minus" type="button">-</button>
+            <input type="text" name="people-children" id="children" value="0">
+            <button class="button-change button-plus" type="button">+</button>
+          </div>
+        </div>
+        <div class="apointment-item-button">
           <button class="button" type="submit">Найти</button>
-        </p>
+        </div>
       </fieldset>
 
     </form>
@@ -190,7 +196,7 @@
 </main>
 
 <footer class="main-footer">
-  <div class="footer-page">
+  <div class="footer-page footer-index">
     <div class="footer-left">
       <p><a href="#">#VISITSEDONA</a></p>
     </div>
@@ -262,30 +268,23 @@
 
   var close = popup.querySelector(".button-apointment");
 
-  var form = popup.querySelector("form");
+  var form = document.querySelector("form");
 
-  var date = popup.querySelector("[name=date]");
+  var date = popup.querySelector("[name=text]");
 
-  var number = popup.querySelector("[name=number]");
 
   var isStorageSupport = true;
   var storage = "";
 
   try {
-    storage = localStorage.getItem("date");
+    storage = localStorage.getItem("text");
   } catch (err) {
     isStorageSupport = false;
   }
 
   link.addEventListener("click", function (evt) {
     evt.preventDefault();
-    popup.classList.add("modal-show");
-
-    if (storage) {
-      date.value = storage;
-      number.focus()
-    } else
-      date.focus();
+    popup.classList.toggle("modal-show");
   });
 
   close.addEventListener("click", function (evt) {

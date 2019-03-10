@@ -2,7 +2,6 @@
 /* Общие для сайта */
 
 body {
-  width: 1280px;
 
   margin: 0;
 
@@ -33,8 +32,7 @@ img {
   margin: 0 auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden {
+.visually-hidden {
 
   position: absolute;
 
@@ -51,14 +49,12 @@ input[type="checkbox"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}                                                /* Работа со скрытыми иконками фильтра */
-
+}
 
 
 /* header
    main-header */
 
-/* Шапка, навигация, общая для всех */
 
 .main-header {
   position: relative;
@@ -72,7 +68,7 @@ input[type="checkbox"].visually-hidden {
   font-weight: 700;
   line-height: 26px;
 
-  color: #000000;                                            /*   Правильная центровка меню - навигации  */
+  color: #000000;
 }
 
 .main-header-logo {
@@ -84,48 +80,47 @@ input[type="checkbox"].visually-hidden {
 }
 
 .main-navigation-wrapper {
-
+  width: 100%;
   margin-bottom: 0;
 
   background-color: #ffffff;
+}
+
+.container-navigation {
+  width: 100%;
+  height: 56px;
 }
 
 .site-navigation {
   display: flex;
   justify-content: space-between;
 
-  margin: -5px;
+  padding: 0 73px;
+  margin: -7px 0;
 
   list-style: none;
 }
 
-.container-navigation {
-  width: 1054px;
-  height: 56px;
+.site-navigation li:nth-child(1),
+.site-navigation li:nth-child(2),
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+  display: block;
+  width: 25%;
 
-  padding: 0 73px;
+  padding-top: 20px;
+  padding-bottom: 23px;
+
 }
 
 .site-navigation li:nth-child(1),
 .site-navigation li:nth-child(2) {
-
-  padding-top: 20px;
-  padding-bottom: 23px;
-  margin-right: 145px;
-
-  list-style: none;
-  text-align: center;
+  text-align: left;
 }
 
 .site-navigation li:nth-child(3),
 .site-navigation li:nth-child(4) {
-
-  padding-top: 20px;
-  padding-bottom: 23px;
-  margin-left: 150px;
-
-  list-style: none;
-  text-align: center;
+  text-align: right;
 }
 
 .site-navigation a {
@@ -149,21 +144,26 @@ input[type="checkbox"].visually-hidden {
 
 /* main
     container */
-/* Главная */
 
 .background-intro {
   width: 1200px;
-  height: 570px;
+  height: 507px;
+
+  margin-top: -50px;
+
 }
 
 .about-us {
-  margin-top: 60px;
-  margin-bottom: 35px;
+  display: block;
+  margin-top: 115px;
+  margin-bottom: 50px;
 
   text-align: center;
 }
 
 .about-us b {
+  display: block;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -172,16 +172,13 @@ input[type="checkbox"].visually-hidden {
 }
 
 .about-us p {
-  margin-top: 35px;
+  display: block;
+  padding-top: 15px;
 
   font-weight: 400;
   line-height: 26px;
 
   color: #333333;
-}
-
-.features {
-  margin: 0;
 }
 
 .features-item {
@@ -199,7 +196,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .description h3 {
-  margin-top: 39px;
+  margin-top: 48px;
 
   font-size: 21px;
   font-weight: 700;
@@ -208,8 +205,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .description p {
-  margin-top: 28px;
-  margin-bottom: 63px;
+  padding-top: 10px;
+  margin-bottom: 56px;
 }
 
 .sedona-photo {
@@ -252,8 +249,8 @@ input[type="checkbox"].visually-hidden {
 .souvenirs h3 {
   position: relative;
 
-  padding-top: 163px;
-  padding-bottom: 30px;
+  padding-top: 145px;
+  padding-bottom: 5px;
 }
 
 .home h3::before {
@@ -330,8 +327,8 @@ input[type="checkbox"].visually-hidden {
 .area p,
 .road p,
 .tourists p {
-  margin-top: 28px;
-  margin-bottom: 63px;
+  padding-top: 10px;
+  margin-bottom: 60px;
 }
 
 .apointment-title {
@@ -343,7 +340,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .apointment-title h2 {
-  padding-top: 55px;
+  padding-top: 50px;
   margin: 0;
 
   font-size: 30px;
@@ -354,7 +351,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .apointment-title p {
-  padding-top: 34px;
+  padding-top: 10px;
   padding-bottom: 137px;
 
   font-weight: 400;
@@ -396,6 +393,211 @@ input[type="checkbox"].visually-hidden {
   background-color: #503e33;
 }
 
+.apointment-form {
+
+  position: absolute;
+  width: 576px;
+
+  margin-top: -127px;
+  margin-left: 310px;
+}
+.apointment-form h3 {
+  width: 574px;
+
+}
+
+.button-apointment {
+  display: block;
+  height: 100%;
+  line-height: 90px;
+}
+
+.apointment-container {
+  display: none;
+
+  padding: 55px 57px;
+  margin-top: -20px;
+
+  background-color: #ffffff;
+  border: none;
+}
+
+.apointment-item {
+  padding-bottom: 30px;
+}
+
+.apointment-item label,
+.apointment-item-people label {
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.apointment-item label {
+
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 2px;
+}
+
+.apointment-item-people label {
+  padding-top: 15px;
+  padding-right: 40px;
+}
+
+.apointment-item input[type="text"],
+.apointment-item-people input[type="text"] {
+  font-weight: 700;
+  line-height: 26px;
+
+  color: #000000;
+  background-color: #f2f2f2;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.apointment-item input[type="text"] {
+  width: 343px;
+}
+
+.apointment-item {
+  display: flex;
+}
+
+.apointment-item svg {
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 22px;
+
+  padding-top: 3px;
+  padding-left: 428px;
+}
+
+.apointment-item svg path {
+  fill: #cacaca;
+}
+
+.apointment-item svg path:hover {
+  fill: #000000;
+}
+
+.apointment-item svg path:active {
+  fill: #81b3d2;
+}
+
+.apointment-item-people {
+  display: flex;
+  justify-content: space-between;
+  width: 455px;
+}
+
+.people-grown {
+  display: flex;
+  justify-content: space-between;
+}
+
+.people-grown label,
+.people-children label {
+  padding-top: 10px;
+}
+
+.people-children {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-change {
+  position: relative;
+  width: 38px;
+  height: 40px;
+  font-size: 0;
+  background-color: #f2f2f2;
+  border: 0;
+}
+
+.button-change::before,
+.button-change::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 18px;
+  left: 13px;
+  background-color: #a9a9a9;
+}
+
+.button-plus::after {
+  transform: rotate(90deg);
+}
+
+.button-plus:hover,
+.button-minus:hover {
+  color: #000000;
+}
+
+.button-plus:active,
+.button-minus:active {
+  color: #81b3d2;
+}
+
+.apointment-item-people input {
+
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 54px;
+
+  background-color: #f2f2f2;
+}
+
+.apointment-item input:hover,
+.apointment-item-people input:hover {
+  color: #000000;
+  background-color: #ebebeb;
+}
+
+.apointment-item input:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+
+.apointment-item-button .button {
+  width: 459px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+
+  color: #ffffff;
+  background-color: #81b3d2;
+  text-transform: uppercase;
+
+  border: none;
+}
+
+.apointment-item-button .button:hover {
+  color: #ffffff;
+  background-color: #669ec0;
+}
+
+.apointment-item-button .button:active {
+  color: #88b6d1;
+  background-color: #5496bd;
+}
+
+.map {
+  margin-top: -15px;
+  margin-bottom: -5px;
+}
+
 /* Скрипты к форме */
 
 @keyframes shake {
@@ -428,159 +630,21 @@ input[type="checkbox"].visually-hidden {
   animation: shake 0.6s;
 }
 
-/* Скрипты к форме end */
-
-.apointment-form {
-
-  position: absolute;
-  width: 576px;
-
-  margin-top: -127px;
-  margin-left: 310px;
-}
-.apointment-form h3 {
-  width: 574px;
-
-  padding: 33px 0;
-}
-
-.apointment-container {
-  display: block;
-
-  height: 395px;
-
-  padding: 55px 57px;
-  margin-top: -20px;
-
-  background-color: #ffffff;
-  border: none;
-}
-
-.apointment-item {
-  padding-bottom: 30px;
-}
-.apointment-item label,
-.apointment-item-people label {
-  margin-top: 13px;
-  margin-right: 15px;
-
-  font-weight: 700;
-  line-height: 26px;
-  color: #000000;
-}
-
-.apointment-item input[type="date"],
-.apointment-item-people input[type="number"] {
-  font-weight: 700;
-  line-height: 26px;
-
-  color: #000000;
-  background-color: #f2f2f2;
-
-  border: none;
-}
-
-.apointment-item input[type="date"] {
-  width: 346px;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.apointment-item {
-  display: flex;
-}
-
-.apointment-item svg {
-  display: block;
-  position: absolute;
-  width: 21px;
-  height: 22px;
-
-  margin-top: 10px;
-  margin-left: 418px;
-}
-
-.apointment-item svg path {
-  fill: #cacaca;
-}
-
-.apointment-item svg path:hover {
-  fill: #000000;
-}
-
-.apointment-item svg path:active {
-  fill: #81b3d2;
-}
-
-.apointment-item-people {
-  display: flex;
-  justify-content: space-between;
-  width: 455px;
-}
-
-.apointment-item-people input[type="number"] {
-
-  width: 38px;
-  height: 38px;
-
-  margin-bottom: 54px;
-
-  background-color: #f2f2f2;
-}
-
-.apointment-item input:hover,
-.apointment-item-people input:hover {
-  color: #000000;
-  background-color: #ebebeb;
-}
-
-.apointment-item input:focus,
-.apointment-item-people input:focus {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-.apointment-item .button {
-  width: 459px;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 0;
-
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 26px;
-
-  color: #ffffff;
-  background-color: #81b3d2;
-
-  border: none;
-}
-
-.apointment-item .button:hover {
-  color: #ffffff;
-  background-color: #669ec0;
-}
-
-.apointment-item .button:active {
-  color: #88b6d1;
-  background-color: #5496bd;
-}
-
-.map {
-  margin-top: -15px;
-  margin-bottom: -5px;
-}
 
 /* main
     container-page */
 
-/* Внутреняя страница */
 
 .container-page {
   margin: 0 auto;
   color: #ffffff;
+}
+
+.filters {
+  display: flex;
+
+  width: 100%;
+  height: 217px;
 }
 
 .filters .filters-form {
@@ -591,8 +655,44 @@ input[type="checkbox"].visually-hidden {
 
 .filters-form {
   padding: 0 73px ;
-  margin-top: -205px;
-  margin-bottom: -40px;
+
+  width: 1200px;
+  height: 218px;
+  background-image: url("../img/filter-background-1.jpg");
+  background-repeat: no-repeat;
+
+}
+
+.filters-form fieldset {
+  border: none;
+}
+
+.filters-form .left-item {
+  padding: 0;
+  margin: 0;
+}
+
+.filters-form .middle-item {
+   margin-left: -210px;
+}
+
+.left-item legend,
+.middle-item legend,
+.right-item legend {
+  padding-top: 33px;
+  padding-bottom: 21px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+
+  text-align: left;
+  color: #ffffff;
+}
+
+.right-item legend {
+  margin-left: 17px;
+  margin-bottom: -18px;
 }
 
 .filters-form ul {
@@ -605,85 +705,52 @@ input[type="checkbox"].visually-hidden {
 
 .filter-option {
   display: flex;
+  padding-bottom: 25px;
+  background-repeat: no-repeat;
+}
 
-  margin-bottom: 30px;
+.filter-option-2 {
+  margin-top: -3px;
+}
+
+input[type="checkbox"] {
+  display: none;
 }
 
 .filter-option label {
   display: block;
   position: relative;
 
-  margin-left: 16px;
-
   cursor: pointer;
   user-select: none;
 }
 
-.filter-option path {                    /* Почему форма не работает?  */
-  fill: #ffffff;
+.filter-option input[type="checkbox"] + label {
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.png"); }
+
+
+.filter-option input[type="checkbox"]:checked + label {
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.png"); }
+
+
+.filter-option span {
+  margin-top: 2px;
+  margin-left: 15px;
 }
 
-.filter-option polygon {
-  fill: #ffffff;
-}
-
-.filter-option path:disabled {
-  fill: #6a6a6a;
-}
-
-.filter-option polygon:disabled {
-  fill: #6a6a6a;
-}
-
-.filters-form .left-item {
-  width: 150px;
-  height: 190px;
-}
-
-.filters-form .middle-item {
-  width: 160px;
-  height: 190px;
-
-  margin-left: -70px;
-}
-
-.filters-form .right-item {
-  height: 190px;
-}
-
-.filters-form fieldset {
-  border: none;
-}
-
-.left-item legend,
-.middle-item legend,
-.right-item legend {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 21px;
-
-  color: #ffffff;
-}
-
-.left-item,
-.middle-item,
-.right-item {
-  padding: 23px 0;
-}
-
-.right-item {
-  width: 330px;
-}
-
-.right-item legend {
-  margin-bottom: 9px;
-}
 
 .price-controls {
   position: relative;
 
   height: 36px;
 
+  margin-right: -10px;
   margin-bottom: 20px;
 
   font-size: 0;
@@ -791,7 +858,7 @@ input[type="checkbox"].visually-hidden {
 
 .price-controls input {
   width: 50px;
-  margin: 0;
+  margin-left: 5px;
 
   color:  inherit;
   font: inherit;
@@ -814,7 +881,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .catalog .search-span {
-  margin: 31px 50px 31px 73px;
+  margin: 37px 50px 31px 73px;
 
   font-size: 21px;
   font-weight: 700;
@@ -827,7 +894,7 @@ input[type="checkbox"].visually-hidden {
   display: flex;
   justify-content: space-between;
 
-  margin-top: 38px;
+  margin-top: 43px;
   margin-bottom: 28px;
 }
 
@@ -901,6 +968,7 @@ input[type="checkbox"].visually-hidden {
   display: flex;
   justify-content: space-between;
 
+  padding: 26px 73px;
 }
 
 .catalog-page .catalog-item {
@@ -908,10 +976,14 @@ input[type="checkbox"].visually-hidden {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.catalog-item-image {
+  display: flex;
+  align-items: flex-end;
+
+}
+
 .item-left {
   display: flex;
-
-  margin: 31px 73px;
 
 }
 
@@ -921,9 +993,11 @@ input[type="checkbox"].visually-hidden {
   margin-left: 30px;
 }
 
-.description-h3 a {
-  padding: 0;
+.description-h3 h3 {
   margin: 0;
+}
+
+.description-h3 a {
 
   font-size: 21px;
   font-weight: 700;
@@ -932,30 +1006,19 @@ input[type="checkbox"].visually-hidden {
 }
 
 .description-span {
-  display: flex;
-
-  padding: 0;
-  margin: 0;
-}
-
-.description-span .span-hotel,
-.description-span .span-motel,
-.description-span .span-apartaments,
-.description-span .span-price {
-  margin-top: -12px;
-
+  padding-top: 5px;
 }
 
 .description-span .span-hotel {
-  margin-right: 41px;
+  padding-right: 41px;
 }
 
 .description-span .span-motel {
-  margin-right: 65px;
+  padding-right: 65px;
 }
 
 .description-span .span-apartaments {
-  margin-right: 15px;
+  padding-right: 15px;
 }
 
 .description-catalog-item h3 a:hover {
@@ -974,10 +1037,12 @@ input[type="checkbox"].visually-hidden {
   display: flex;
 
   width: 259px;
+
+  padding-top: 10px;
 }
 
 .button {
-  padding: 8px 17px;
+  padding: 6px 17px 2px 17px;
 
   font-weight: 700;
   text-align: center;
@@ -1023,18 +1088,14 @@ input[type="checkbox"].visually-hidden {
 
 .item-right {
   display: block;
-
-  margin-top: 30px;
-  margin-right: 73px;
-  margin-bottom: 30px;
 }
 
 .stars {
   display: flex;
   justify-content: flex-end;
 
-  padding: 0;
-  margin: 0;
+  margin-top: 0;
+  padding-bottom: 35px;
 }
 
 .stars ul {
@@ -1051,9 +1112,8 @@ input[type="checkbox"].visually-hidden {
   width: 18px;
   height: 18px;
 
-  margin-top: 15px;
-  margin-right: 5px;
-  margin-bottom: 46px;
+  padding-right: 4px;
+
 
   list-style: none;
 }
@@ -1069,10 +1129,9 @@ input[type="checkbox"].visually-hidden {
   background-image: url("../img/start.svg");
 }
 
-
-
 .grade {
-  padding: 7px 15px;
+  padding: 5px 15px;
+  margin-left: 15px;
 
   color: #666666;
   background-color: #f2f2f2;
@@ -1082,27 +1141,37 @@ input[type="checkbox"].visually-hidden {
 /* footer
    main-footer*/
 
-/* Подвал */
 
 .main-footer {
   display: flex;
-
-
   color: #000000;
   background: #ffffff;
 
-                                                     /* ! Настройка полупрозрачносьи фона футера на главной странице */
+}
+
+.footer-index {
+   position: relative;
+
+   width: 100%;
+
+   margin-top: -128px;
+
+   box-sizing: border-box;
+   z-index: 2;
+
+   color: #000000;
+   background: rgb( 255, 255, 255, 0.9);
+
 }
 
 .footer-page {
   display: flex;
-  justify-content: space-between;
-
+  justify-content: flex-start;
 }
 
 .footer-left {
-  padding-top: 49px;
-  padding-left: 131px;
+  padding-top: 34px;
+  padding-left: 128px;
 }
 
 .footer-left a {
@@ -1120,9 +1189,9 @@ input[type="checkbox"].visually-hidden {
 .social {
   display: flex;
 
-  margin-top: 38px;
-  margin-left: 200px;
-  margin-bottom: 35px;
+  padding-top: 23px;
+  padding-left: 255px;
+  padding-bottom: 20px;
 
   list-style: none;
 }
@@ -1156,13 +1225,12 @@ input[type="checkbox"].visually-hidden {
 .footer-right span {
   display: block;
 
-  margin-top: 35px;
-  margin-left: 225px;
+  padding-top: 33px;
+  padding-left: 221px;
 
   font-weight: 400;
   line-height: 26px;
   color: #231f20;
-
 }
 
 .footer-right a {
@@ -1171,9 +1239,8 @@ input[type="checkbox"].visually-hidden {
   width: 115px;
   height: 41px;
 
-  margin-top: -35px;
-  margin-left: 310px;
-
+  margin-top: -34px;
+  padding-left: 304px;
 }
 
 .footer-right a path {
