@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Седона: Гостиницы</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Седона: Гостиницы</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
 <body>
 <header class="main-header">
   <nav class="main-navigation">
-    <a class="main-header-logo" href="index.html">
+    <a class="main-header-logo" href="index.html" tabindex="0">
       <img src="img/logo.svg" width="140" height="72" alt="Логотип сервиса по поиску отелей в Седоне">
     </a>
-    <div class="main-navigation-wrapper">
-      <div class="container-navigation">
-        <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="photo-video.html">Фото и видео</a></li>
-          <li><a href="map.html">Карта штата</a></li>
-          <li class="site-navigation-current"><a href="hotels.html">Гостиницы</a></li>
-        </ul>
-      </div>
+    <div class="container-navigation">
+      <ul class="site-navigation">
+        <li><a href="info.html" tabindex="1">Информация</a></li>
+        <li><a href="photo-video.html" tabindex="2">Фото и видео</a></li>
+        <li><a href="map.html" tabindex="3">Карта штата</a></li>
+        <li class="site-navigation-current" tabindex="4"><a href="hotels.html">Гостиницы</a></li>
+      </ul>
     </div>
   </nav>
 </header>
@@ -37,17 +35,17 @@
         <ul>
           <li class="filter-option filter-option-1">
             <input class="filter-input filter-input-checkbox" type="checkbox" name="option1" id="pool" checked>
-            <label for="pool"></label><span>Бассейн</span>
+            <label for="pool" tabindex="5"></label><span>Бассейн</span>
 
           </li>
           <li class="filter-option filter-option-1">
             <input class="filter-input filter-input-checkbox" type="checkbox" name="option1" id="parking">
-            <label for="parking"></label><span>Парковка</span>
+            <label for="parking" tabindex="6"></label><span>Парковка</span>
 
           </li>
           <li class="filter-option filter-option-1">
             <input class="filter-input filter-input-checkbox" type="checkbox" name="option1" id="wi-fi">
-            <label for="wi-fi"></label><span>Wi-Fi</span>
+            <label for="wi-fi" tabindex="7"></label><span>Wi-Fi</span>
 
           </li>
         </ul>
@@ -58,17 +56,17 @@
         <ul>
           <li class="filter-option filter-option-2">
             <input class="filter-input filter-input-checkbox" type="checkbox" name="option2" id="hotel" checked>
-            <label for="hotel"></label><span>Гостиница</span>
+            <label for="hotel" tabindex="8"></label><span>Гостиница</span>
 
           </li>
           <li class="filter-option filter-option-2">
             <input class="filter-input filter-input-checkbox" type="checkbox" name="option2" id="motel" checked>
-            <label for="motel"></label><span>Мотель</span>
+            <label for="motel" tabindex="9"></label><span>Мотель</span>
 
           </li>
           <li class="filter-option filter-option-2">
             <input class="filter-input filter-input-checkbox" type="checkbox" name="option2" id="apartments" checked>
-            <label for="apartments"></label><span>Апартаменты</span>
+            <label for="apartments" tabindex="10"></label><span>Апартаменты</span>
 
           </li>
         </ul>
@@ -77,8 +75,8 @@
       <fieldset class="right-item">
         <legend>Стоимость в сутки (Р):</legend>
         <div class="price-controls">
-          <label class="min-price">от<input type="text" name="min-price" value="0"></label>
-          <label class="max-price">до<input type="text" name="max-price" value="3000"></label>
+          <label class="min-price">от<input type="text" name="min-price" value="0" tabindex="11"></label>
+          <label class="max-price">до<input type="text" name="max-price" value="3000" tabindex="12"></label>
         </div>
         <div class="range-controls">
           <div class="scale">
@@ -87,7 +85,7 @@
           <div class="range-toggle range-toggle-min"></div>
           <div class="range-toggle range-toggle-max"></div>
         </div>
-        <button class="filter-button" type="submit">Показать</button>
+        <button class="filter-button" type="submit" tabindex="13">Показать</button>
       </fieldset>
     </form>
 
@@ -98,12 +96,13 @@
     <div class="catalog-search">
       <span class="search-span">Найдено: 3</span>
       <div class="sorting">
-        <span class="sorting-span">Сортировка:</span>
-        <div class="sorting-list">
-          <a class="list-item price-current" href="#">по цене</a>
-          <a class="list-item type" href="#">по типу</a>
-          <a class="list-item rating" href="#">по рейтингу</a>
-        </div>
+        <h2 class="sorting-span">Сортировка:</h2>
+        <ul class="sorting-list">
+          <li><a class="list-item price-current" href="#">по цене</a></li>
+          <li><a class="list-item type" href="#">по типу</a></li>
+          <li><a class="list-item rating" href="#">по рейтингу</a></li>
+
+        </ul>
         <div class="line">
           <a class="up" href="#"><span class="visually-hidden">Ранжирование вверх</span>
             <svg version="1.1" id="Layer_11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -126,13 +125,13 @@
         <div class="catalog-item">
 
           <div class="item-left">
-            <div class="catalog-item-image">
-                <a href="#">
-                  <img src="img/housing-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
-                </a>
+            <div class="item-image-one">
+              <a href="#">
+                <img src="img/housing-1.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
+              </a>
 
             </div>
-            <div class="description-catalog-item">
+            <div class="catalog-item-one">
               <div class="description-h3">
                 <h3>
                   <a href="#">Amara Resort & Spa</a>
@@ -162,13 +161,13 @@
         <div class="catalog-item">
 
           <div class="item-left">
-            <div class="catalog-item-image">
-                <a href="#">
-                  <img src="img/housing-2.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
-                </a>
+            <div class="item-image-two">
+              <a href="#">
+                <img src="img/housing-2.jpg" width="135" height="90" alt="Фото мотеля Desert Quail Inn">
+              </a>
 
             </div>
-            <div class="description-catalog-item">
+            <div class="catalog-item-two">
               <div class="description-h3">
                 <h3>
                   <a href="#">Desert Quail Inn</a>
@@ -186,7 +185,7 @@
           </div>
 
           <div class="item-right">
-            <ul class="stars">
+            <ul class="stars stars-two">
               <li><span class="visually-hidden">Звезда</span></li>
               <li><span class="visually-hidden">Звезда</span></li>
               <li><span class="visually-hidden">Звезда</span></li>
@@ -197,21 +196,21 @@
         <div class="catalog-item">
 
           <div class="item-left">
-            <div class="catalog-item-image">
-                <a href="#">
-                  <img src="img/housing-3.jpg" width="135" height="90" alt="Фото аппартамент Villas at Poco Diablo">
-                </a>
+            <div class="item-image-three">
+              <a href="#">
+                <img src="img/housing-3.jpg" width="135" height="90" alt="Фото аппартамент Villas at Poco Diablo">
+              </a>
 
             </div>
 
-            <div class="description-catalog-item">
+            <div class="catalog-item-three">
               <div class="description-h3">
                 <h3>
                   <a href="#">Villas at Poco Diablo</a>
                 </h3>
               </div>
               <div class="description-span">
-                <span class="span-apartaments">Аппартаменты</span>
+                <span class="span-apartaments">Апартаменты</span>
                 <span class="span-price">от 2000 Р.</span>
               </div>
               <div class="catalog-button">
@@ -222,7 +221,7 @@
           </div>
 
           <div class="item-right">
-            <ul class="stars">
+            <ul class="stars stars-three">
               <li><span class="visually-hidden">Звезда</span></li>
               <li><span class="visually-hidden">Звезда</span></li>
             </ul>
@@ -230,6 +229,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </main>
@@ -237,7 +237,7 @@
 <footer class="main-footer">
   <div class="footer-page">
     <div class="footer-left">
-      <p><a href="#">#VISITSEDONA</a></p>
+      <a href="#">#VISITSEDONA</a>
     </div>
 
     <div class="footer-middle">
@@ -280,8 +280,8 @@
     </div>
 
     <div class="footer-right">
-      <p><span>WEBSITE BY</span><a href="https://htmlacademy.ru">
-        <svg id="Layer_16" data-name="Layer 16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 39"><title>
+      <p><span>WEBSITE BY</span><a href="https://htmlacademy.ru/intensive/htmlcss">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 39"><title>
           logo_name</title>
           <path
             d="M401.93,351.51a2.07,2.07,0,0,0,.58-0.11v1.4a3.41,3.41,0,0,1-1.24.22,1.75,1.75,0,0,1-1.75-1,5.08,5.08,0,0,1-3.3,1.13c-1.59,0-3.06-.87-3.06-2.68,0-2.24,2.08-2.93,3.9-2.93a11.63,11.63,0,0,1,2.28.26v-0.31c0-1.09-.8-1.86-2.3-1.86a7.79,7.79,0,0,0-3.15.67v-1.79a10.72,10.72,0,0,1,3.35-.58c2.48,0,4,1.18,4,3.83v3.14A0.57,0.57,0,0,0,401.93,351.51Zm-6.76-1.19a1.42,1.42,0,0,0,1.64,1.29,3.56,3.56,0,0,0,2.53-1V349.1a10.21,10.21,0,0,0-1.9-.22C396.34,348.89,395.17,349.23,395.17,350.33Z"
@@ -313,12 +313,15 @@
           <path
             d="M413.19,337.58v-8.75h1.73v1.09a4,4,0,0,1,2.92-1.33,3,3,0,0,1,2.73,1.4,4.33,4.33,0,0,1,3.06-1.4,3.21,3.21,0,0,1,3.32,3.52v5.47h-2v-5.41a1.67,1.67,0,0,0-1.73-1.84,2.94,2.94,0,0,0-2.17,1.18c0,0.2,0,.4,0,0.6v5.47h-2v-5.41a1.67,1.67,0,0,0-1.73-1.84,3.11,3.11,0,0,0-2.32,1.35v5.91h-2Z"
             transform="translate(-355.09 -323.29)" fill="#fff"/>
+
           <rect x="74.72" y="1.52" width="1.95" height="12.76" fill="#fff"/>
           <path
             d="M370.53,323.31l-0.16,0-15.28,1.6v28L370.37,362l15.28-9.09v-28Zm13.12,28.45-13.28,7.9-13.28-7.9V340.28l13.22,7.87,0,1.43-9.07-5.4v1.38l9.11,5.47,0,1.46-9.1-5.42v1.38l9.11,5.47h0l9.19-5.5v-1.39h0v-4.52l4.1-2.45v11.67Zm0-13.16L380,340.74h0l-1.68,1-8-4.76v1.38l6.84,4.07-0.06,0-0.15.09-1,.57-5.64-3.36v1.38l4.45,2.65-1.05.7,0,0-3.36-2v1.38l2.21,1.3-2.25,1.35-13.16-7.82,13.17-7.92h0Zm0-1.39-13.35-7.87h0l-13.2,7.86v-10.5l13.28-1.39,13.28,1.39v10.51Z"
             transform="translate(-355.09 -323.29)" fill="#fff"/>
         </svg>
-      </a></p>
+
+      </a>
+      </p>
     </div>
   </div>
 
