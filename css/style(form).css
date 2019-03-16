@@ -748,7 +748,10 @@ input[type="text"]::-moz-placeholder {
 }
 
 .map {
+  width: 1200px;
+  height: 593px;
   margin-top: -19px;
+  background-image: url(../img/map.jpg);
 }
 
 iframe {
@@ -948,19 +951,16 @@ input[type="checkbox"] {
 }
 
 .filter-option input[type="checkbox"] + label {
-  width: 23px;
+  width: 27px;
   height: 23px;
 
-  padding-top: 1px;
-
-  background-image: url("../img/checkbox-off.png");
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
 }
 
 .filter-option input[type="checkbox"]:disabled + label {
-  width: 23px;
+  width: 27px;
   height: 23px;
-
-  padding-top: 1px;
 
   background-image: url("../img/checkbox-off-disabled.png");
 }
@@ -1315,6 +1315,14 @@ input[type="checkbox"] {
   color: #000000;
 }
 
+.description-h3 a:hover {
+  color: #81b3d2;
+}
+
+.description-h3 a:active {
+  color: #cacaca;
+}
+
 .description-span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1342,14 +1350,6 @@ input[type="checkbox"] {
 
 .description-span .span-apartaments {
   padding-right: 20px;
-}
-
-.description-catalog-item a:hover {
-  color: #81b3d2;
-}
-
-.description-catalog-item a:active {
-  color: #cacaca;
 }
 
 .catalog-button {
